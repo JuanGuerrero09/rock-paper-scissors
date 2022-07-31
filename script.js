@@ -4,12 +4,10 @@ function getComputerChoice(){
     return options[Math.floor(Math.random()*options.length)]
 }
 
-let playerSelection = "PAper"
-const computerSelection = getComputerChoice() 
+
 
 
 function playRound(playerSelection, computerSelection){
-  
     let playerPic = playerSelection.toLowerCase()
     let result = ""
     if (playerPic == "rock"){
@@ -59,11 +57,20 @@ function playRound(playerSelection, computerSelection){
         return "You lose " + computerSelection + " beats " + playerPic + ":c"
     }
     else if (result == "win"){
-        return "You won! " + playerPic+ " beats" + computerSelection + "c:"
+        return "You won! " + playerPic+ " beats " + computerSelection + "c:"
     }
     else {
         return "It's a tie!"
     }
 }
 
-console.log(playRound(playerSelection, computerSelection))
+
+function game(){
+    for (let i = 0; i < 5; i++){
+        let playerSelection = prompt("Rock, paper or scissor?")
+        const computerSelection = getComputerChoice() 
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
+console.log(game())
