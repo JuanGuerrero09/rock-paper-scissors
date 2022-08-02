@@ -1,4 +1,7 @@
 const options = ["rock", "paper", "scissors"]
+let win = 0
+let lose = 0
+let tie = 0
 
 function getComputerChoice(){
     return options[Math.floor(Math.random()*options.length)]
@@ -54,12 +57,15 @@ function playRound(playerSelection, computerSelection){
     console.log("The computer choice is: " + computerSelection)
     console.log("The result is: ")
     if (result == "lose"){
+        lose++
         return "You lose " + computerSelection + " beats " + playerPic + ":c"
     }
     else if (result == "win"){
+        win++
         return "You won! " + playerPic+ " beats " + computerSelection + "c:"
     }
     else {
+        tie++
         return "It's a tie!"
     }
 }
@@ -70,6 +76,21 @@ function game(){
         let playerSelection = prompt("Rock, paper or scissor?")
         const computerSelection = getComputerChoice() 
         console.log(playRound(playerSelection, computerSelection))
+        //console.log("Number of wins: " + win)
+        //console.log("Numer of loses: " + lose)
+    }
+    console.log("The final results are: ")
+    console.log(win + " Wins")
+    console.log(lose + " Loses")
+    console.log(tie + " Ties")
+    if(win>lose){
+        console.log("You won!")
+    }
+    else if (lose>win){
+        console.log("You lose :c")
+    }
+    else{
+        console.log("It's a tie")
     }
 }
 
