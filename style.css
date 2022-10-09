@@ -15,8 +15,9 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 10vh;
+    padding: 2vh;
     background-image: linear-gradient(60deg, #252525 0%, #303030 100%);
 }
 
@@ -29,6 +30,16 @@ body{
 .up > h1 {
     color: whitesmoke;
     font-size: 12vh;
+}
+
+.middle{
+    color: whitesmoke;
+    height: 5vh;
+    font-size: 3vh;
+    padding: 2vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .game{
@@ -75,15 +86,17 @@ i{
 
 .down
 {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly
+
 }
 
 .result{
-    padding: 5vh;
-    font-size: 5vh;
+    padding: 4vh;
+    font-size: 4vh;
     color: white;
+    width: 3vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
