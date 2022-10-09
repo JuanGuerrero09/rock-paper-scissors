@@ -11,18 +11,24 @@ button{
 }
 
 body{
+    font-family: 'IBM Plex Sans Condensed';
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10vh;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #252525 0%, #303030 100%);
 }
 
 .up{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.up > h1 {
+    color: whitesmoke;
+    font-size: 12vh;
 }
 
 .game{
@@ -32,12 +38,12 @@ body{
 }
 
 .select{
-        /* From https://css.glass */
-    background: rgba(201, 221, 228, 0.3);
+    /* From https://css.glass */
+    background: rgba(201, 221, 228, 0.14);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.6px);
-    -webkit-backdrop-filter: blur(5.6px);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
     border: 1px solid rgba(201, 221, 228, 0.27);
     border-color: lightgray;
     margin: 5vh;
@@ -49,8 +55,37 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+.select:hover{
+    background: rgb(230, 229, 229);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border: 1px solid rgba(201, 221, 228, 0.27);
+    color: #303030;
+    cursor: pointer;
 }
 
 i{
     font-size: 15vh;
+}
+
+.down
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result{
+    padding: 5vh;
+    font-size: 5vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

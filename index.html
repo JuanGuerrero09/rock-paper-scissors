@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -26,9 +27,18 @@
         </div>
     </div>
     <div class="down">
-        <h2 class="result">
-            Contador
-        </h2>
+        <div class="result user">
+            <h2>User</h2>
+            <h2 id="user-score">
+                0
+            </h2>
+        </div>
+        <div class="result machine">
+            <h2>Machine</h2>
+            <h2 id="machine-score">
+                0
+            </h2>
+        </div>
     </div>
     
 </body>
