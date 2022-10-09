@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+button{
+    width: 5vh;
+    height: 5vh;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select{
+        /* From https://css.glass */
+    background: rgba(201, 221, 228, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(201, 221, 228, 0.27);
+    border-color: lightgray;
+    margin: 5vh;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    font-size: 15vh;
+}

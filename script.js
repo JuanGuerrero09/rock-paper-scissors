@@ -1,4 +1,4 @@
-const options = ["rock", "paper", "scissors"]
+/*const options = ["rock", "paper", "scissors"]
 let win = 0
 let lose = 0
 let tie = 0
@@ -94,4 +94,4 @@ function game(){
     }
 }
 
-console.log(game())
+console.log(game())*/
