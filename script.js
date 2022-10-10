@@ -1,41 +1,4 @@
-/*
-
-
-
-
-
-
-
-function playRound(playerSelection, computerSelection){
-    let playerPic = playerSelection.toLowerCase()
-    
-}
-
-
-function game(){
-    for (let i = 0; i < 5; i++){
-        let playerSelection = prompt("Rock, paper or scissor?")
-        const computerSelection = getComputerChoice() 
-        console.log(playRound(playerSelection, computerSelection))
-        //console.log("Number of wins: " + win)
-        //console.log("Numer of loses: " + lose)
-    }
-    console.log("The final results are: ")
-    console.log(win + " Wins")
-    console.log(lose + " Loses")
-    console.log(tie + " Ties")
-    if(win>lose){
-        console.log("You won!")
-    }
-    else if (lose>win){
-        console.log("You lose :c")
-    }
-    else{
-        console.log("It's a tie")
-    }
-}
-
-console.log(game())*/
+//VARIABLES
 
 let win = 0
 let lose = 0
@@ -66,27 +29,11 @@ scissors.addEventListener('click', playRound)
 
 
 
-
-
 //FUNCTIONS
-
-function playGame(){
-    if (played == 5)
-    {
-        if(win>lose){
-            roundResult.innerText = ("You won!")
-        }
-        else if (lose>win){
-            roundResult.innerText = ("You lost")
-        }
-        else{
-            roundResult.innerText = ("It's a tie")
-        }
-    }
-}
 
 function playRound()
 {
+    //This if will stop the game if 5 rounds are played
     if (played == 5)
     {
         if(win>lose){
@@ -98,8 +45,9 @@ function playRound()
         else{
             roundResult.innerText = ("It's a tie")
         }
-        return 0;
+        return;
     }
+    //Here is the logic of the game
     const playerPic = this.classList[1]
     let computerSelection = getComputerChoice()
     let result = ""
@@ -143,29 +91,31 @@ function playRound()
             
         }
     }
+
+    //This part will print the result of every round
     roundResult.innerText = ('The machine chose ' + computerSelection + '\nthe result is: ' + result)
-    
 
     if (result == "lose"){
         lose++
-        //return "You lose " + computerSelection + " beats " + playerPic + ":c"
     }
     else if (result == "win"){
         win++
-        //return "You won! " + playerPic+ " beats " + computerSelection + "c:"
     }
     else {
         tie++
-        //return "It's a tie!"
     }
+
+    //This part will change the counters for win, tie, and loses in the game every round
     userScore.innerText = win
     tieScore.innerText = tie
     machineScore.innerText = lose
+
+    //Add 1 to rounds played
     played++
 }
 
 
-
+//A function that get numebers from 0 to 2, the result is the index that will be used for the game
 function getComputerChoice(){
     return options[Math.floor(Math.random()*options.length)]
 }
