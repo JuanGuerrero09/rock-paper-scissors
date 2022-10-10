@@ -1,4 +1,4 @@
-#Minimalist Rock-Paper-Scissors Game
+# Minimalist Rock-Paper-Scissors Game
 
 Hey! This is a minimalist RPS game, inspired by the JS Basics from The Odin Project.
 
