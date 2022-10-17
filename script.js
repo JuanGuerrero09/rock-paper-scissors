@@ -45,6 +45,12 @@ function playRound()
         else{
             roundResult.innerText = ("It's a tie")
         }
+
+        const playAgain = document.createElement('div')
+        playAgain.innerHTML = '<button onClick="location.reload()">Click here to play again</button>'
+        playAgain.firstChild.classList.add('playAgain')
+        roundResult.appendChild(playAgain)
+
         return;
     }
     //Here is the logic of the game
