@@ -10,3 +10,4 @@ to do's:
 - Add play again feature
 - Make it responsive
 - Maybe: add light/dark mode
+- Use clamp or (min/max) to meake it responsive
